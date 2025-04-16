@@ -18,28 +18,29 @@ import org.springframework.stereotype.Service;
 public class LikeServicio {
     
         @Autowired
-        private ILike like;
+        private ILike repositorylike;
         
         
         //obtener los likes
         public List<Like> obtenerLikes(){
-        return like.findAll(); 
+        return repositorylike.findAll(); 
         }
         
         
         //dar comentario 
         public Like darLike(Like like){
-        return like.save(like);
-        }
+        return repositorylike.save(like);
+}
+
         
         
         //eliminar like
         public void eliminarLike(Long id){
-         like.deleteById(id);
+         repositorylike.deleteById(id);
         }
         
         
         public Like buscarPorId (Long id){
-        return like.findById(id).orElse(null);
+        return repositorylike.findById(id).orElse(null);
         }
 }

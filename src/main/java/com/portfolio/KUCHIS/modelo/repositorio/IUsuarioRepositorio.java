@@ -4,15 +4,13 @@
  */
 package com.portfolio.KUCHIS.modelo.repositorio;
 
-import com.portfolio.KUCHIS.modelo.Comentario;
-import java.util.List;
+import com.portfolio.KUCHIS.modelo.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
  * @author JUAN JOSE
  */
-public interface IComentarioRepository extends JpaRepository<Comentario, Long> {
+public interface IUsuarioRepositorio extends JpaRepository<Usuario, Long> {
     
-   
 }
